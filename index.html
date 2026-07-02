@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishant Asati | Portfolio</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">Nishant Asati<span>.</span></div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a class="btn-nav" href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero / About Section -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <p class="hero-subtitle">Hi, There!</p>
+                <h1 class="hero-title">I'm <span>Nishant Asati</span></h1>
+                <p class="hero-description">
+                    I am a computer science and economics graduate from The Pennsylvania State University with a passion
+                    for building intelligent systems. My expertise spans deep learning, natural language processing,
+                    distributed training, and software engineering.
+                </p>
+
+                <div class="social-icons">
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn-primary">Hire me</a>
+                    <a href="#experience" class="btn-secondary">View Work</a>
+                </div>
+            </div>
+
+            <div class="hero-image-container">
+                <!-- Replace src with your cutout profile picture path like in image_6ff59d.png -->
+                <img src="Nishant.jpeg" alt="Nishant Asati" class="hero-placeholder-img">
+            </div>
+        </section>
+
+        <!-- Professional Work & Experience Section -->
+        <section id="experience">
+            <h2 class="section-title">Professional Work & Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Research Assistant</h3>
+                            <span class="job-company">New York University</span>
+                        </div>
+                        <span class="job-date">Nov 2024 - Dec 2025</span>
+                    </div>
+                    <ul class="job-details">
+                        <li>Designed encoder-decoder transformer with a novel cross-attention mechanism addressing
+                            cross-asset relationship gaps in traditional models, predicting simultaneous returns across
+                            500+ S&P 500 stocks from unstructured financial news.</li>
+                        <li>Engineered custom attention ordering with softmax confidence scoring, enabling each stock
+                            embedding to independently extract weighted news signals/alpha and autonomously determine
+                            article relevance without labeled training data.</li>
+                        <li>Implemented distributed data-parallel training across 4 GPUs using Ray Train,
+                            flash-attention, and AMP mixed precision, with Bayesian hyperparameter search and ASHA
+                            pruning on 14M+ financial articles.</li>
+                        <li>Backtested a 2023 held-out portfolio achieving a Sharpe ratio of 1.8, diagnosing a two-stage
+                            optimization failure where zero-return collapse progressed to low-volatility asset
+                            concentration via W&B tracking.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Research Assistant</h3>
+                            <span class="job-company">College of Information Science & Technology, Penn State</span>
+                        </div>
+                        <span class="job-date">Aug 2022 - Aug 2024</span>
+                    </div>
+                    <ul class="job-details">
+                        <li>Analyzed behavioral patterns of 265K Reddit users across 3.9M+ posts to identify a rare
+                            cross-community user segment exhibiting opposing online behaviors across two contrasting
+                            communities.</li>
+                        <li>Engineered user-level activity features and applied the LIWC-22 NLP framework for tone and
+                            sentiment analysis; trained classification models (Logistic Regression, Decision Tree,
+                            AdaBoost) with SMOTE oversampling and 5-fold cross-validation.</li>
+                        <li>Achieved a ROC-AUC of 0.85 proving community norms, not personality, drive user behavior.
+                        </li>
+                    </ul>
+                    <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/31352" class="pub-link"><i
+                            class="fas fa-file-alt"></i> Publication: Nishant Asati et al. "The
+                        Strange Case of Jekyll and Hyde: Analysis of R/ToastMe and R/RoastMe Users on Reddit."
+                        Proceedings of the 18th International AAAI Conference on Web and Social Media (ICWSM), 2024.
+                        [View Publication]</a>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">AI/ML Research Assistant</h3>
+                            <span class="job-company">Natural Language Processing Lab, Penn State</span>
+                        </div>
+                        <span class="job-date">May 2022 - Aug 2022</span>
+                    </div>
+                    <ul class="job-details">
+                        <li>Built a Graph Convolutional Network (GCN) to classify short-answer responses for an
+                            automated grading task.</li>
+                        <li>Preprocessed 50K+ student responses using Regex, Pandas, and openpyxl; tracked 8+ model
+                            configurations using MLflow.</li>
+                        <li>Achieved a 73% macro F1 on 3-class and 70% accuracy on 2-class classification using
+                            Text-GCN.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Software Developer Intern</h3>
+                            <span class="job-company">Mswasth Tech Private Limited</span>
+                        </div>
+                        <span class="job-date">Nov 2021 - Jan 2022</span>
+                    </div>
+                    <ul class="job-details">
+                        <li>Integrated an Android-based text extraction feature into a healthcare app, enabling raw text
+                            extraction from patient reports.</li>
+                        <li>Developed a Python text extraction engine using OpenCV and Levenshtein distance, boosting
+                            accuracy up to 80%.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Engineering Projects Section -->
+        <section id="projects">
+            <h2 class="section-title">Featured Engineering Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div>
+                        <div class="project-meta">
+                            <i class="fas fa-robot project-icon"></i>
+                            <span>Production App</span>
+                        </div>
+                        <h3 class="project-title">AI Knowledge Chatbot</h3>
+                        <p class="project-desc">Built a RAG-based chatbot using LangChain and FAISS vector search to
+                            handle 100+ daily queries across multiple documents. Deployed the chatbot on Kubernetes for
+                            high availability, successfully cutting query response times by 20% for faster access.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <div class="project-meta">
+                            <i class="fas fa-brain project-icon"></i>
+                            <span>LLM Fine-tuning</span>
+                        </div>
+                        <h3 class="project-title">AI Data Science Tutor</h3>
+                        <p class="project-desc">Fine-tuned a 14B Phi-4 model using LoRA and 4-bit quantization, applying
+                            cluster batching to handle context window limits. Built an automated grading evaluation
+                            iterative loop to improve responses, boosting alignment by 11% without heavy hardware.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <div class="project-meta">
+                            <i class="fas fa-microchip project-icon"></i>
+                            <span>Aug 2024 - Nov 2024</span>
+                        </div>
+                        <h3 class="project-title">CPU Process Scheduler Simulator</h3>
+                        <p class="project-desc">Built a C++ simulation implementing 4 scheduling algorithms (FCFS, Round
+                            Robin, Priority, LSTF) and 4 page-replacement strategies (FIFO, Clock, Aging, Working Set)
+                            using object-oriented design. Mapped 1000+ virtual-to-physical memory address references,
+                            demonstrating core OS concepts in a working environment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Competencies Section -->
+        <section id="skills">
+            <h2 class="section-title">Technical Competencies</h2>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h3 class="category-title">Languages & Databases</h3>
+                    <div class="tags-container">
+                        <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Java</span>
+                        <span class="tag">C++</span><span class="tag">TypeScript</span><span class="tag">HTML/CSS</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 class="category-title">Frameworks & Libraries</h3>
+                    <div class="tags-container">
+                        <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span
+                            class="tag">Scikit-learn</span>
+                        <span class="tag">LangChain</span><span class="tag">FAISS</span><span class="tag">Pandas</span>
+                        <span class="tag">NumPy</span><span class="tag">Flask/FastAPI</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 class="category-title">Tools & Platforms</h3>
+                    <div class="tags-container">
+                        <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Git</span>
+                        <span class="tag">CI/CD</span><span class="tag">MLflow</span><span class="tag">REST APIs</span>
+                        <span class="tag">Distributed Systems</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 class="category-title">Concepts & Techniques</h3>
+                    <div class="tags-container">
+                        <span class="tag">LLMs</span><span class="tag">RAG</span><span class="tag">Agentic
+                            Workflows</span>
+                        <span class="tag">Fine-tuning</span><span class="tag">LoRA</span><span
+                            class="tag">Transformers</span>
+                        <span class="tag">OCR</span><span class="tag">EDA</span><span
+                            class="tag">Cross-Validation</span>
+                        <span class="tag">Dimensional Models</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-container">
+                <p class="contact-text">I am currently looking for opportunities or interesting collaborations in
+                    machine learning and distributed engineering. Feel free to reach out directly!</p>
+                <div class="contact-info">
+                    <a href="mailto:na3704@nyu.edu" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>na3704@nyu.edu</span>
+                    </a>
+                    <a href="tel:+917880108083" class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 78801 08083</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright &copy; 2026 — Made by Nishant Asati</p>
+    </footer>
+
+</body>
+
+</html>
