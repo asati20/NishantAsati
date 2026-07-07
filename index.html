@@ -30,7 +30,7 @@
 
     <main>
         <!-- Hero / About Section -->
-        <section id="about" class="hero">
+        <section id="about" class="hero tab-section">
             <div class="hero-content">
                 <p class="hero-subtitle">Hi, There!</p>
                 <h1 class="hero-title">I'm <span>Nishant Asati</span></h1>
@@ -60,7 +60,7 @@
         </section>
 
         <!-- Professional Work & Experience Section -->
-        <section id="experience">
+        <section id="experience" class="tab-section">
             <h2 class="section-title">Professional Work & Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
@@ -149,7 +149,7 @@
         </section>
 
         <!-- Featured Engineering Projects Section -->
-        <section id="projects">
+        <section id="projects" class="tab-section">
             <h2 class="section-title">Featured Engineering Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
@@ -195,7 +195,7 @@
         </section>
 
         <!-- Technical Competencies Section -->
-        <section id="skills">
+        <section id="skills" class="tab-section">
             <h2 class="section-title">Technical Competencies</h2>
             <div class="skills-grid">
                 <div class="skills-category">
@@ -241,18 +241,18 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact-section">
+        <section id="contact" class="contact-section tab-section">
             <h2 class="section-title">Get in Touch</h2>
             <div class="contact-container">
                 <p class="contact-text">I am currently looking for opportunities or interesting collaborations in
                     machine learning and distributed engineering. Feel free to reach out directly!</p>
                 <div class="contact-info">
-                    <a href="mailto:na3704@nyu.edu" class="contact-item">
+                    <a href="mailto:nasati2000@gmail.com" class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>na3704@nyu.edu</span>
+                        <span>nasati2000@gmail.com</span>
                     </a>
                     <a href="tel:+917880108083" class="contact-item">
-                        <i class="fas fa-phone-alt"></i>
+                        <i class="fas fa-phone"></i>
                         <span>+91 78801 08083</span>
                     </a>
                 </div>
@@ -264,6 +264,74 @@
     <footer>
         <p>Copyright &copy; 2026 — Made by Nishant Asati</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('header nav ul li a');
+            const sections = document.querySelectorAll('.tab-section');
+            const ctaButtons = document.querySelectorAll('.cta-buttons a, .btn-nav');
+
+            function switchTab(targetId) {
+                const id = targetId.replace('#', '');
+                
+                sections.forEach(sec => {
+                    if (sec.id === id) {
+                        sec.classList.add('active-tab');
+                    } else {
+                        sec.classList.remove('active-tab');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    const linkHash = link.getAttribute('href');
+                    if (linkHash === `#${id}`) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                history.pushState(null, null, `#${id}`);
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const href = link.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        switchTab(href);
+                    }
+                });
+            });
+
+            ctaButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const href = btn.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        switchTab(href);
+                    }
+                });
+            });
+
+            const currentHash = window.location.hash;
+            if (currentHash && document.querySelector(currentHash)) {
+                switchTab(currentHash);
+            } else {
+                switchTab('#about');
+            }
+
+            window.addEventListener('popstate', () => {
+                const hash = window.location.hash;
+                if (hash && document.querySelector(hash)) {
+                    switchTab(hash);
+                } else {
+                    switchTab('#about');
+                }
+            });
+        });
+    </script>
 
 </body>
 

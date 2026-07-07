@@ -430,6 +430,49 @@ section {
     font-size: 1.2rem;
 }
 
+/* Tab Navigation Styles */
+.tab-section {
+    display: none !important;
+}
+
+.tab-section.active-tab {
+    display: block !important;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+section.hero.tab-section.active-tab {
+    display: flex !important;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+nav ul li a.active {
+    color: var(--accent-color) !important;
+    font-weight: 600;
+    position: relative;
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Footer */
 footer {
     padding: 2rem 8%;
