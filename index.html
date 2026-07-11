@@ -14,9 +14,11 @@
 
 <body>
 
-    <!-- Header Navigation -->
     <header>
         <div class="logo">Nishant Asati<span></span></div>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+        </button>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -271,8 +273,25 @@
             const sections = document.querySelectorAll('.tab-section');
             const ctaButtons = document.querySelectorAll('.cta-buttons a, .btn-nav');
 
+            // Mobile navigation toggle
+            const mobileToggle = document.querySelector('.mobile-nav-toggle');
+            const nav = document.querySelector('header nav');
+
+            if (mobileToggle && nav) {
+                mobileToggle.addEventListener('click', () => {
+                    mobileToggle.classList.toggle('open');
+                    nav.classList.toggle('nav-active');
+                });
+            }
+
             function switchTab(targetId) {
                 const id = targetId.replace('#', '');
+                
+                // Close mobile menu if open
+                if (mobileToggle && nav) {
+                    mobileToggle.classList.remove('open');
+                    nav.classList.remove('nav-active');
+                }
                 
                 sections.forEach(sec => {
                     if (sec.id === id) {
