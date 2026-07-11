@@ -93,7 +93,8 @@
                     <div class="job-header">
                         <div>
                             <h3 class="job-title">Research Assistant</h3>
-                            <span class="job-company">College of Information Science & Technology, Penn State</span>
+                            <span class="job-company">College of Information Science & Technology, Pennsylvania State
+                                University</span>
                         </div>
                         <span class="job-date">Aug 2022 - Aug 2024</span>
                     </div>
@@ -118,7 +119,8 @@
                     <div class="job-header">
                         <div>
                             <h3 class="job-title">AI/ML Research Assistant</h3>
-                            <span class="job-company">Natural Language Processing Lab, Penn State</span>
+                            <span class="job-company">Natural Language Processing Lab, Pennsylvania State
+                                University</span>
                         </div>
                         <span class="job-date">May 2022 - Aug 2022</span>
                     </div>
@@ -286,13 +288,13 @@
 
             function switchTab(targetId) {
                 const id = targetId.replace('#', '');
-                
+
                 // Close mobile menu if open
                 if (mobileToggle && nav) {
                     mobileToggle.classList.remove('open');
                     nav.classList.remove('nav-active');
                 }
-                
+
                 sections.forEach(sec => {
                     if (sec.id === id) {
                         sec.classList.add('active-tab');
